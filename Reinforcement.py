@@ -54,7 +54,6 @@ class LabyrinthEnv(gymnasium.Env):
         self.past_distances.append(13)""" # Done olduğunda uzaklığa göre reward
 
     def compute_bfs_distances(self):
-        """Precomputes the actual path distance from every valid tile to the goal."""
         goal_x, goal_y = self.goal[0], self.goal[1]
         distances = {(goal_x, goal_y): 0}
         queue = deque([(goal_x, goal_y, 0)])
